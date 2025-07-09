@@ -13,6 +13,9 @@ body {
     margin: 0;
     padding: 0;
 }
+a {
+    text-decoration: none;
+}
 * {
     font-size: 1.25rem; /* ~20px */
     color: #4b3426;
