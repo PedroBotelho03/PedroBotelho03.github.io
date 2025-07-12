@@ -69,22 +69,24 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 0.5rem;
     flex-wrap: wrap;
     justify-content: center;
+}
+.footer_left {
+    flex: 3;
+}
+.footer_right {
+    flex: 1;
 }
 .rights {
     font-size: 0.8rem; /* ~12px */
 }
-.footer_icon {
-    width: 1.5rem; /* ~24px */
-    height: 1.5rem; /* ~24px */
-    margin: 0 8px;
-    vertical-align: middle;
+.footer_contact {
     transition: transform 0.2s ease-in-out;
 }
 
-.footer_icon:hover {
+.footer_contact:hover {
     transform: scale(1.1);
 }
 /* MEDIA QUERIES FOR RESPONSIVENESS */
