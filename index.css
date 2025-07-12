@@ -79,9 +79,11 @@ h2 {
 .footer_icon {
     width: 1.5rem; /* ~24px */
     height: 1.5rem; /* ~24px */
-    object-fit: cover;
-    transition: transform 0.2s;
+    margin: 0 8px;
+    vertical-align: middle;
+    transition: transform 0.2s ease-in-out;
 }
+
 .footer_icon:hover {
     transform: scale(1.1);
 }
