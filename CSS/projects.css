@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+
+.francois-one-regular {
+  font-family: "Francois One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+    background-color: #4b3426;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+* {
+    font-size: 1.25rem; /* ~20px */
+    color: #4b3426;
+    text-align: justify;
+    font-family: "Francois One", sans-serif;
+    box-sizing: border-box;
+}
+h1 {
+    font-size: 3rem; /* ~48px */
+}
+
+h2 {
+    font-size: 2rem; /* ~32px */
+}
+.header, .page_intro, .footer {
+    background-color: #eeaa32;
+    color: white;
+    text-align: justify;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+.header_left, .header_right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.clickable_header, .footer_contact {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.clickable_header:hover, .footer_contact:hover {
+    transform: scale(1.05);
+}
+.profile_image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.page_intro {
+    flex-direction: column;
+    margin: 1rem 3rem;
+    padding: 1rem;
+}
+.project_cards_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 1rem 3rem;
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+.project_card {
+    background-color: #eeaa32;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    flex: 1 1 calc(33.333% - 2rem);
+    max-width: calc(33.333% - 2rem);
+    max-height: 450px; /* 👈 Limits total card height */
+}
+.project_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.project_image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.project_info {
+    padding: 1rem;
+    flex-direction: column;
+    display: flex;
+    overflow: hidden;
+    max-height: 200px; /* 👈 Controls description box growth */
+}
+.project_info h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+.project_info p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #4b3426;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;        /* 👈 Show 4 lines max */
+    line-clamp: 4;                /* 👈 Standard property for compatibility */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.footer_left, .footer_right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.footer_left {
+    flex: 3;
+}
+.footer_right {
+    flex: 1;
+}
+.rights {
+    font-size: 0.8rem; /* ~12px */
+}
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+@media (max-width: 768px) {
+    * {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .header, .page_intro, .footer {
+        margin: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .header_left, .header_right, 
+    .footer_left, .footer_right {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .profile_image {
+        width: 70px;
+        height: 70px;
+    }
+        .project_card {
+        flex: 1 1 calc(50% - 2rem);
+        max-width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .header, .page_intro, .footer {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .profile_image {
+        width: 60px;
+        height: 60px;
+    }
+        .project_card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
