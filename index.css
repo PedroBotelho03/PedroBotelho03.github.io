@@ -51,7 +51,6 @@ h2 {
     cursor: pointer;
     transition: transform 0.2s;
 }
-
 .clickable_header:hover {
     transform: scale(1.05);
 }
@@ -65,7 +64,6 @@ h2 {
     flex-direction: column;
     margin: 1rem 3rem;
     padding: 1rem;
-
 }
 .footer_left, .footer_right {
     display: flex;
@@ -74,7 +72,6 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
 }
-
 /* MEDIA QUERIES FOR RESPONSIVENESS */
 @media (max-width: 768px) {
     * {
